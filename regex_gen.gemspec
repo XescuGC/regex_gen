@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["xescuGC"]
   spec.email         = ["xescugil@gmail.com"]
   spec.description   = %q{Generate RegExp from regular text}
-  spec.summary       = spec.desciption
+  spec.summary       = spec.description
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec", "~> 3.2.0"
 end
