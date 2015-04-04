@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["xescugil@gmail.com"]
   spec.description   = %q{Generate RegExp from regular text}
   spec.summary       = spec.description
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/XescuGC/regex_gen"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
