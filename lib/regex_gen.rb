@@ -4,7 +4,7 @@ require 'regex_gen/training_set'
 
 module RegexGen
   class << self
-    def generate!
+    def generate!(training_set)
     end
   end
 end

@@ -10,7 +10,7 @@ module RegexGen
     private
 
     def validate_example(example)
-      unless example =~ /{{/
+      if example.scan(/{([a-zA-Z_]+):{([^}]+)}}/).empty?
         raise 'Invalid example: No group found'
       end
     end
