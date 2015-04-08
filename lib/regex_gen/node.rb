@@ -6,6 +6,10 @@ module RegexGen
       @childrens = []
     end
 
+    def leaf?
+      @childrens.empty?
+    end
+
     def << child
       @childrens << child
     end
