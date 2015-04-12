@@ -17,9 +17,9 @@ describe RegexGen::Node do
       expect(node.parent_node).to eq(@aux_node)
     end
     it 'with errors if not valid nodes' do
-      expect{subject.new('test')}.to raise_error('Invalid parent_node type, must be a RegexGen::Node')
-      expect{subject.new(nil, 'test')}.to raise_error('Invalid left_children type, must be a RegexGen::Node')
-      expect{subject.new(nil, nil, 'test')}.to raise_error('Invalid right_children type, must be a RegexGen::Node')
+      expect{subject.new('test')}.to raise_error('Invalid left_children type, must be a RegexGen::Node')
+      expect{subject.new(nil, 'test')}.to raise_error('Invalid right_children type, must be a RegexGen::Node')
+      expect{subject.new(nil, nil, 'test')}.to raise_error('Invalid parent_node type, must be a RegexGen::Node')
     end
   end
 

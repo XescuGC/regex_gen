@@ -4,7 +4,7 @@ module RegexGen
     attr_reader :right_children
     attr_reader :left_children
 
-    def initialize(parent_node=nil, left_children=nil, right_children=nil)
+    def initialize(left_children=nil, right_children=nil, parent_node=nil)
       self.parent_node = parent_node
       self.left_children = left_children
       self.right_children = right_children
