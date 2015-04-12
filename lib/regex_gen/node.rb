@@ -34,7 +34,7 @@ module RegexGen
       end
     end
 
-    def leaf?
+    def is_leaf?
       @left_children.nil? && @right_children.nil?
     end
 

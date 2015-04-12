@@ -2,6 +2,7 @@ require 'regex_gen/version'
 require 'regex_gen/example'
 require 'regex_gen/training_set'
 require 'regex_gen/node'
+require 'regex_gen/tree_manager'
 
 module RegexGen
   class << self

@@ -8,10 +8,17 @@ describe RegexGen::Example do
       it 'with valid example' do
         expect(@example.example).to eq('{s:{string}}')
       end
-      it 'with invalid example' do
-        expect{
-          subject.new 'string'
-        }.to raise_error('Invalid example: No group found')
+      context 'with invalid example' do
+        it 'with invalid string' do
+          expect{
+            subject.new 'string'
+          }.to raise_error('Invalid example: No group found')
+        end
+        it 'with nil' do
+          expect{
+            subject.new
+          }.to raise_error(ArgumentError)
+        end
       end
     end
   end

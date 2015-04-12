@@ -53,13 +53,13 @@ describe RegexGen::Node do
     end
   end
 
-  context '#leaf?' do
+  context '#is_leaf?' do
     it 'must be false with some childrens' do
-      expect(@node.leaf?).to be_truthy
+      expect(@node.is_leaf?).to be_truthy
     end
     it 'must be true with no childrens' do
       @node.left_children = @aux_node
-      expect(@node.leaf?).to be_falsey
+      expect(@node.is_leaf?).to be_falsey
     end
   end
 end
