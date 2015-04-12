@@ -6,6 +6,7 @@ require 'regex_gen/node'
 module RegexGen
   class << self
     def generate!(training_set)
+      raise 'Invalid Argument: Not a RegexGen::TrainingSet' unless training_set.is_a?(RegexGen::TrainingSet)
     end
   end
 end
