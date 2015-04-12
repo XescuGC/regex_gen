@@ -4,7 +4,8 @@ require 'regex_gen/training_set'
 require 'regex_gen/operators/container'
 require 'regex_gen/operators/concatenator'
 require 'regex_gen/node'
-require 'regex_gen/tree_manager'
+require 'regex_gen/node_factory'
+
 
 module RegexGen
   class << self
