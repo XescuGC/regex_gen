@@ -1,14 +1,24 @@
 describe RegexGen::Example do
   subject { RegexGen::Example }
-  context 'must create it' do
-    it 'with valid example' do
-      example = subject.new '{string:{string}}'
-      expect(example.example).to eq('{string:{string}}')
+  before(:each) do
+    @example = subject.new('{s:{string}}')
+  end
+  describe '#new' do
+    context 'must create it' do
+      it 'with valid example' do
+        expect(@example.example).to eq('{s:{string}}')
+      end
+      it 'with invalid example' do
+        expect{
+          subject.new 'string'
+        }.to raise_error('Invalid example: No group found')
+      end
     end
-    it 'with invalid example' do
-      expect{
-        subject.new 'string'
-      }.to raise_error('Invalid example: No group found')
+  end
+  context '#to_basic' do
+    it 'must get the example string without the groups' do
+      expect(@example.to_basic).to eq('string')
+      expect(@example.basic_example).to eq('string')
     end
   end
 end
