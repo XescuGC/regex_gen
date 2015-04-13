@@ -7,8 +7,8 @@ module RegexGen
         node
       end
 
-      def create_node_concatenator
-        RegexGen::Node.new.extend(RegexGen::Operators::Concatenator)
+      def create_node_concatenator(left_children=nil, right_children=nil, parent=nil)
+        RegexGen::Node.new(left_children, right_children, parent).extend(RegexGen::Operators::Concatenator)
       end
     end
   end

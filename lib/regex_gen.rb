@@ -5,6 +5,7 @@ require 'regex_gen/operators/container'
 require 'regex_gen/operators/concatenator'
 require 'regex_gen/node'
 require 'regex_gen/node_factory'
+require 'regex_gen/tree'
 
 
 module RegexGen
